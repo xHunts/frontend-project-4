@@ -61,7 +61,7 @@ error => console.error(error)
 }
 render() { 
 return ( <div>
-<form onSubmit={}>
+<form onSubmit={this.handleSubmit}>
 
 <label>Name:</label>
 <input name="name" value={this.state.eventForm.name}

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {show,update} from './api';
 import {withRouter} from 'react-router-dom';
-import { constants } from 'fs-extra';
+
 class EventEdit extends Component {
     state = { 
         eventForm:{
@@ -14,7 +14,7 @@ class EventEdit extends Component {
      }
      componentDidMount(){
          const user = this.props.user
-         const userId = this.props.user.prams.id
+         const userId = this.props.match.prams.id
          show(user,userId)
          .then((response)=>{
              const event = response.data.event
