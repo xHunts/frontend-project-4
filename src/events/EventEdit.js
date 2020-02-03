@@ -48,7 +48,7 @@ class EventEdit extends Component {
         <form onSubmit={this.handleSubmit}>
             <label>name</label>
             <input onChange={this.handleChange} type="text" name="name" value={this.state.eventForm.name}/>
-            <label>place</label>
+            <label>place</label>>
             <input  onChange={this.handleChange} type="text" name="place" value={this.state.eventForm.place}/>
             <label>link</label>
             <input  onChange={this.handleChange} type="text" name="link" value={this.state.eventForm.link}/>
