@@ -11,6 +11,8 @@ import ChangePassword from './auth/components/ChangePassword'
 import AlertDismissible from './auth/components/AlertDismissible'
 import EventIndex from './events/EventIndex'
 import EventShow from './events/EventShow'
+import EventCreate from './events/EventCreate'
+import EventEdit from './events/EventEdit'
 
 class App extends Component {
   constructor () {
@@ -60,6 +62,16 @@ class App extends Component {
           {/* ----- SHOW -----*/} 
           <Route exact user={user} path='/events/:id' render={() => (
            <EventShow user={user}/>
+          )} /> 
+          
+          {/* ----- EDIT -----  */}
+          <Route exact user={user} path='/events/:id/edit' render={() => (
+           <EventEdit user={user}/>
+          )} /> 
+
+        {/* ----- CREATE -----*/} 
+        <Route exact user={user} path='/events/create' render={() => (
+           <EventCreate user={user}/>
           )} /> 
 
           
