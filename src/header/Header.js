@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-import './Header.scss'
-
+import './Header.scss';
 const authenticatedOptions = (
   <React.Fragment>
     <Link to="/change-password">Change Password</Link>
     <Link to="/sign-out">Sign Out</Link>
+   {/* new */}
+    <Link to="/events/create"> create </Link>
   </React.Fragment>
 )
 
@@ -20,6 +20,7 @@ const unauthenticatedOptions = (
 const alwaysOptions = (
   <React.Fragment>
     <Link to="/">Home</Link>
+    <Link to="/events">ALL EVENTS</Link>
   </React.Fragment>
 )
 
@@ -34,4 +35,4 @@ const Header = ({ user }) => (
   </header>
 )
 
-export default Header
+export default Header;
