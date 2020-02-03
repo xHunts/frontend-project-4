@@ -13,7 +13,9 @@ import EventIndex from './events/EventIndex'
 import EventShow from './events/EventShow'
 import EventCreate from './events/EventCreate'
 import EventEdit from './events/EventEdit'
-
+import Footer from './components/footer/footer'
+import Work from './components/work/work'
+import About from './components/About/about'
 class App extends Component {
   constructor () {
     super()
@@ -74,7 +76,14 @@ class App extends Component {
            <EventCreate user={user}/>
           )} /> 
 
-          
+          <Route exact path='/works' render={() => (
+            <Work/>
+          )}/>
+          <Route exact path='/about' render={() => (
+            <About/>
+          )}/>
+          <Footer/>
+         
         </main>
       </React.Fragment>
     )
