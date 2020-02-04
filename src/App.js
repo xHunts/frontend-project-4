@@ -16,6 +16,7 @@ import EventEdit from './events/EventEdit'
 import Footer from './components/footer/footer'
 import Work from './components/work/work'
 import About from './components/About/about'
+import Home from './components/Home/home'
 class App extends Component {
   constructor () {
     super()
@@ -79,9 +80,12 @@ class App extends Component {
           <Route exact path='/works' render={() => (
             <Work/>
           )}/>
-          
+
           <Route exact path='/about' render={() => (
             <About/>
+          )}/>
+           <Route exact path='/' render={() => (
+            <Home/>
           )}/>
 
 

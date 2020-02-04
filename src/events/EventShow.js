@@ -29,9 +29,6 @@ destroy = (id) => {
         .catch(err => console.log(err))
 }
 
-
-
-
     render() { 
         return (
             <div>

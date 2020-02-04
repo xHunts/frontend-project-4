@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import './work.css'
+import icon1 from '/Users/mashael/Desktop/sei/projects/project-4/react-template/src/images/pin.svg'
+import icont2 from '/Users/mashael/Desktop/sei/projects/project-4/react-template/src/images/focus.svg'
+import icon3 from '/Users/mashael/Desktop/sei/projects/project-4/react-template/src/images/link.svg'
+import icon4 from '/Users/mashael/Desktop/sei/projects/project-4/react-template/src/images/fee.svg'
+
 class Work extends Component {
   
     
@@ -14,7 +19,7 @@ class Work extends Component {
             <p className="text-p">each event has it's own location, and each time it will be in different location!</p>
           </div>
           <div class="col-2 col-sm-1 px-md-3 order-2 timeline-image text-md-center">
-            <img src="img/img13.png" class="img-fluid" alt="img"/>
+            <img src={icon1} class="img-fluid" alt="img"/>
           </div>
           <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
           </div>
@@ -26,7 +31,7 @@ class Work extends Component {
             <p>Events will have different hunts related to the place and purpose</p>
           </div>
           <div class="col-2 col-sm-1 px-md-3 order-2 timeline-image text-md-center">
-            <img src="img/img13.png" class="img-fluid" alt="img"/>
+            <img src={icont2} class="img-fluid" alt="img"/>
           </div>
           <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
             
@@ -39,7 +44,7 @@ class Work extends Component {
             <p>YOU can Join as individuals or as group!!</p>
           </div>
           <div class="col-2 col-sm-1 px-md-3 order-2 timeline-image text-md-center">
-            <img src="img/img13.png" class="img-fluid" alt="img"/>
+            <img src={icon3} class="img-fluid" alt="img"/>
           </div>
           <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
             
@@ -53,7 +58,7 @@ class Work extends Component {
             <p> 50SR for each person</p>
           </div>
           <div class="col-2 col-sm-1 px-md-3 order-2 timeline-image text-md-center">
-            <img src="img/img13.png" class="img-fluid" alt="img"/>
+            <img src={icon4} class="img-fluid" alt="img"/>
           </div>
           <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
             
