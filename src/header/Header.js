@@ -43,7 +43,7 @@ const Header = ({ user }) => (
       { alwaysOptions }
       {user ? 
       <div>
-        {user.admin ? <Link to="/events/create"> create </Link> :""}
+        {user.admin ? <Link to="/events/create/event"> create </Link> :""}
       </div>
       : ""}
       
