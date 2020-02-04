@@ -17,7 +17,6 @@ const alwaysOptions = (
   <React.Fragment>
       <Link to ='/about'>About</Link>
       <Link to ="/works">How it works</Link>
-      <Link to="/events">events</Link>
       <Link to="/">Home</Link>
   
   </React.Fragment>
@@ -26,9 +25,7 @@ const alwaysOptions = (
 const unauthenticatedOptions = (
   <React.Fragment>
     <Link to="/">Home</Link>
-    <Link to="/events"> EVENTS</Link>
-    <Link to ="/works">How it works</Link>
-    <Link to ='/about'>About</Link>
+    <Link to="/events"> Events</Link>
     <Link to="/sign-in">Sign In</Link>
     <Link to="/sign-up">Sign Up</Link>
   </React.Fragment>
