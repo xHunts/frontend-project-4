@@ -72,7 +72,7 @@ class App extends Component {
           )} /> 
 
         {/* ----- CREATE -----*/} 
-        <AuthenticatedRoute exact user={user} path='/events/create' render={() => (
+        <AuthenticatedRoute exact user={user} path='/events/create/event' render={() => (
            <EventCreate user={user}/>
           )} /> 
 
