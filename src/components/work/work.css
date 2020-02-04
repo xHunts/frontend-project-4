@@ -204,3 +204,13 @@
 .work .text-p {
     text-align: center;
 }
+
+.img-fluid {
+    max-width: 60%;
+    height: auto;
+}
+
+.register {
+    display: block;
+    position: absolute;
+}
