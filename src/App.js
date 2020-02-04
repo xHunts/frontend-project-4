@@ -79,9 +79,12 @@ class App extends Component {
           <Route exact path='/works' render={() => (
             <Work/>
           )}/>
+          
           <Route exact path='/about' render={() => (
             <About/>
           )}/>
+
+
           <Footer/>
          
         </main>

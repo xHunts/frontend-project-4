@@ -36,7 +36,7 @@ const newEvent = this.state.eventForm
 const user = this.props.user
   create(user , newEvent)
   .then(res => {
-    console.log(res)
+    this.props.history.push(`/events`)
   })
   .catch(
     error => console.error(error)

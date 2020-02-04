@@ -51,10 +51,10 @@ export const create = (user , newEvent ) => {
         }
     })
 }
-export const update = (user , updatedEvent ) => {
+export const update = (user , updatedEvent ,eventId ) => {
     return axios({
         method: "PATCH",
-        url: apiUrl + `/events/${updatedEvent._id}`,
+        url: apiUrl + `/events/${eventId}`,
         headers:{
             "Authorization":`Bearer ${user.token}`
         },
