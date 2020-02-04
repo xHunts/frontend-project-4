@@ -39,15 +39,15 @@ export const show = (eventId) => {
     })
 }
 //not sure
-export const create = (user , newF ) => {
+export const create = (user , newEvent ) => {
     return axios({
         method: "POST",
-        url: apiUrl + "/events/",
+        url: apiUrl + "/events",
         headers:{
             "Authorization":`Bearer ${user.token}`
         },
         data: {
-            event: newF
+            event: newEvent
         }
     })
 }

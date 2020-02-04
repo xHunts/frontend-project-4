@@ -6,12 +6,12 @@ class Work extends Component {
     render() { 
         return (
             
-<div class="container">
+<div class="container work">
       <div class="timeline">
       <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
           <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
             <h3 class=" text-light">Event Locaticn</h3>
-            <p>each event has it's own location, and each time it will be in different location!</p>
+            <p className="text-p">each event has it's own location, and each time it will be in different location!</p>
           </div>
           <div class="col-2 col-sm-1 px-md-3 order-2 timeline-image text-md-center">
             <img src="img/img13.png" class="img-fluid" alt="img"/>
