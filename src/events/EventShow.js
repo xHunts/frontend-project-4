@@ -21,15 +21,17 @@ componentDidMount(){
 }
 destroy = (id) => {
     destroy(this.props.user,id)
-        .then(()=> console.timeLog("deleted"))
+        .then(()=> alert("deleted"))
         .then(()=>{
-        const updateEvents = this.state.events.filter(event => event._id !== id)
-        this.setState({
-            events: updateEvents
-        })
+            //redirect the url 
+            this.props.history.push(`/events`)
         })
         .catch(err => console.log(err))
 }
+
+
+
+
     render() { 
         return (
             <div>
@@ -37,10 +39,17 @@ destroy = (id) => {
             <div>
                 <h5>Name: {this.state.event.name}</h5> 
                 <h5>Place: {this.state.event.place}</h5>
-                <h5>Date: {this.state.event.Date}</h5>
+                <h5>Date: {this.state.event.date}</h5>
                 <br/>
                 <img src={this.state.event.img}/>
-                {this.props.user ? <Link to={`/events/${this.state.event._id}/edit`}>Edit</Link> :""}
+                {this.props.user.admin ? 
+                <div>
+                    <Link to={`/events/${this.state.event._id}/edit`}>Edit</Link> 
+                     <button onClick={() => this.destroy(this.state.event._id)}>Delete</button>
+                </div>
+                :
+                ""}
+               
                 <hr/>  
             </div>
             :

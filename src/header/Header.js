@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Header.scss';
+
 const authenticatedOptions = (
   <React.Fragment>
     <Link to="/change-password">Change Password</Link>
     <Link to="/sign-out">Sign Out</Link>
    {/* new */}
-    <Link to="/events/create"> create </Link>
+  
   </React.Fragment>
 )
 
@@ -25,7 +26,14 @@ const alwaysOptions = (
     <Link to ='/about'>About</Link>
   </React.Fragment>
 )
-
+const checkAdminOrNot = (user) => {
+  console.log(user)
+  // if(user.admin){
+  //   return <Link to="/events/create"> create </Link> 
+  // }else{
+  //   return ""
+  // }
+}
 const Header = ({ user }) => (
   <header className="main-header">
     <h1>Uber, But For Taxis</h1>
@@ -33,6 +41,12 @@ const Header = ({ user }) => (
       { user && <span>Welcome, {user.email}</span>}
       { user ? authenticatedOptions : unauthenticatedOptions }
       { alwaysOptions }
+      {user ? 
+      <div>
+        {user.admin ? <Link to="/events/create"> create </Link> :""}
+      </div>
+      : ""}
+      
     </nav>
   </header>
 )

@@ -5,17 +5,17 @@ import {withRouter} from 'react-router-dom';
 class EventEdit extends Component {
     state = { 
         eventForm:{
-        name:"",
-		place:"",
-		link:"",
-		date:"",
-		img:""
+            name:"",
+            place:"",
+            link:"",
+            date:"",
+            img:""
         }
      }
      componentDidMount(){
-         const user = this.props.user
-         const userId = this.props.match.prams.id
-         show(user,userId)
+        //  const user = this.props.user
+         const eventId = this.props.match.params.id
+         show(eventId)
          .then((response)=>{
              const event = response.data.event
              this.setState({
@@ -24,40 +24,51 @@ class EventEdit extends Component {
          })
          .catch(err => console.log(err))
      }
+
+
      handleChange = (event)=> {
         const name = event.target.name;
         const value = event.target.value;
-        const newForm = Object.assign(this.state.eventForm)
+        const newForm = {...this.state.eventForm}
         newForm[name] = value;
         this.setState({
             eventForm:newForm
         })
     }
+
+
     handleSubmit = (event) =>{
         event.preventDefault();
-        console.log(this.props)
+        // console.log(this.props)
         const user = this.props.user;
-        const userId = this.props.match.params.id;
+        const eventId = this.props.match.params.id;
         const updateEvent = this.state.eventForm;
-        update(user,updateEvent,userId)
-        .then(() => this.props.history.push(`/events/${userId}`))
+        update(user,updateEvent,eventId)
+        .then(() => this.props.history.push(`/events/${eventId}`))
         .catch((error) => console.log(error))
     }
+
+
     render() { 
         return ( 
         <form onSubmit={this.handleSubmit}>
-            <label>name</label>
-            <input onChange={this.handleChange} type="text" name="name" value={this.state.eventForm.name}/>
-            <label>place</label>>
-            <input  onChange={this.handleChange} type="text" name="place" value={this.state.eventForm.place}/>
-            <label>link</label>
-            <input  onChange={this.handleChange} type="text" name="link" value={this.state.eventForm.link}/>
-            <label>date</label>
-            <input  onChange={this.handleChange} type="text" name="date" value={this.state.eventForm.date}/>
-            <label>image</label>
-            <input  onChange={this.handleChange} type="text" name="img" value={this.state.eventForm.img}/>
-            <button type="submit">Update</button>
-    </form>
+            <label>Name:</label>
+            <input name="name" value={this.state.eventForm.name} onChange={this.handleChange}/>
+            
+            <label>Place Name:</label>
+            <input name="place" value={this.state.eventForm.place} onChange={this.handleChange}/>
+            
+            <label>Place Link</label>
+            <input name="link" value={this.state.eventForm.link} onChange={this.handleChange}/>
+            
+            <label>Date:</label>
+            <input name="date" type="date"  value={this.state.eventForm.date} onChange={this.handleChange}/>
+
+            <label>img:</label>
+            <input name="img" value={this.state.eventForm.img} onChange={this.handleChange}/>
+           
+            <input type="submit"/>
+        </form>
      );
     }
 }

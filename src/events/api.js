@@ -39,22 +39,22 @@ export const show = (eventId) => {
     })
 }
 //not sure
-export const create = (user , newF ) => {
+export const create = (user , newEvent ) => {
     return axios({
         method: "POST",
-        url: apiUrl + "/events/",
+        url: apiUrl + "/events",
         headers:{
             "Authorization":`Bearer ${user.token}`
         },
         data: {
-            event: newF
+            event: newEvent
         }
     })
 }
-export const update = (user , updatedEvent ) => {
+export const update = (user , updatedEvent ,eventId ) => {
     return axios({
         method: "PATCH",
-        url: apiUrl + `/events/${updatedEvent._id}`,
+        url: apiUrl + `/events/${eventId}`,
         headers:{
             "Authorization":`Bearer ${user.token}`
         },
