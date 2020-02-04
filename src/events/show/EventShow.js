@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {show,destroy} from './api'
+import {show,destroy} from '../api'
 import {withRouter} from 'react-router-dom';
 import { Link } from 'react-router-dom'
 class EventShow extends Component {
@@ -39,15 +39,21 @@ destroy = (id) => {
                 <h5>Date: {this.state.event.date}</h5>
                 <br/>
                 <img src={this.state.event.img}/>
-                {this.props.user.admin ? 
+                {this.props.user ? 
                 <div>
-                    <Link to={`/events/${this.state.event._id}/edit`}>Edit</Link> 
+                    {this.props.user.admin ? 
+                    <div>
+                          <Link to={`/events/${this.state.event._id}/edit`}>Edit</Link> 
                      <button onClick={() => this.destroy(this.state.event._id)}>Delete</button>
+                    </div>
+                    :
+                    ""}
+                  
                 </div>
                 :
                 ""}
                
-                <hr/>  
+               
             </div>
             :
             ""}

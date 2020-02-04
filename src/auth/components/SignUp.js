@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-
 import { signUp, signIn } from '../api'
 import messages from '../messages'
+import { Form } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import { FormGroup } from 'react-bootstrap';
+import { FormLabel} from 'react-bootstrap';
+import { FormControl } from 'react-bootstrap';
+import { Container }from 'react-bootstrap';
+import "./signstyle.css"
 
 class SignUp extends Component {
   constructor () {
@@ -40,38 +46,39 @@ class SignUp extends Component {
     const { email, password, passwordConfirmation } = this.state
 
     return (
-      <form className='auth-form' onSubmit={this.onSignUp}>
+      <Container>
+      <Form className='mar-form' onSubmit={this.onSignUp}>
+      <FormGroup controlId="formBasicEmail">
         <h3>Sign Up</h3>
 
-        <label htmlFor="email">Email</label>
-        <input
+        <FormLabel htmlFor="email">Email</FormLabel>
+        <FormControl
           required
           name="email"
           value={email}
           type="email"
-          placeholder="Email"
           onChange={this.handleChange}
         />
-        <label htmlFor="password">Password</label>
-        <input
+        <FormLabel htmlFor="password">Password</FormLabel>
+        <FormControl
           required
           name="password"
           value={password}
           type="password"
-          placeholder="Password"
           onChange={this.handleChange}
         />
-        <label htmlFor="passwordConfirmation">Confirm Password</label>
-        <input
+        <FormLabel htmlFor="passwordConfirmation">Confirm Password</FormLabel>
+        <FormControl
           required
           name="passwordConfirmation"
           value={passwordConfirmation}
           type="password"
-          placeholder="Confirm Password"
           onChange={this.handleChange}
         />
-        <button type="submit">Sign Up</button>
-      </form>
+         <Button variant="primary" type="submit">Sign Up</Button>
+    </FormGroup>
+    </Form>
+    </Container>
     )
   }
 }
