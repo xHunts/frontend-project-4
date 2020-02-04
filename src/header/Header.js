@@ -11,19 +11,23 @@ const authenticatedOptions = (
   </React.Fragment>
 )
 
-const unauthenticatedOptions = (
-  <React.Fragment>
-    <Link to="/sign-up">Sign Up</Link>
-    <Link to="/sign-in">Sign In</Link>
-  </React.Fragment>
-)
+
 
 const alwaysOptions = (
   <React.Fragment>
-    <Link to="/">Home</Link>
-    <Link to="/events"> EVENTS</Link>
-    <Link to ="/works">How it works</Link>
-    <Link to ='/about'>About</Link>
+      <Link to ='/about'>About</Link>
+      <Link to ="/works">How it works</Link>
+      <Link to="/">Home</Link>
+  
+  </React.Fragment>
+)
+
+const unauthenticatedOptions = (
+  <React.Fragment>
+  
+    <Link to="/events"> Events</Link>
+    <Link to="/sign-in">Sign In</Link>
+    <Link to="/sign-up">Sign Up</Link>
   </React.Fragment>
 )
 const checkAdminOrNot = (user) => {
@@ -35,19 +39,26 @@ const checkAdminOrNot = (user) => {
   // }
 }
 const Header = ({ user }) => (
-  <header className="main-header">
-    <h1>Uber, But For Taxis</h1>
-    <nav>
-      { user && <span>Welcome, {user.email}</span>}
-      { user ? authenticatedOptions : unauthenticatedOptions }
-      { alwaysOptions }
-      {user ? 
-      <div>
-        {user.admin ? <Link to="/events/create/event"> create </Link> :""}
-      </div>
-      : ""}
-      
-    </nav>
+  <header className="Nav">
+    <div className="topnav">
+      <nav className="nav1">
+        <div> 
+        <h1 className="ln">xHunts</h1>
+        </div>
+       
+         <div>
+         { user && <span>Welcome, {user.email}</span>}
+        { user ? authenticatedOptions : unauthenticatedOptions }
+        {user ? 
+       
+        user.admin ? <Link to="/events/create/event"> create </Link> :""
+     
+        : ""}
+        { alwaysOptions }
+         </div>
+        
+      </nav>
+    </div>
   </header>
 )
 

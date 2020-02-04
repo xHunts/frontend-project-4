@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './work.css'
-import icon1 from '/Users/mashael/Desktop/sei/projects/project-4/react-template/src/images/pin.svg'
-import icont2 from '/Users/mashael/Desktop/sei/projects/project-4/react-template/src/images/focus.svg'
-import icon3 from '/Users/mashael/Desktop/sei/projects/project-4/react-template/src/images/link.svg'
-import icon4 from '/Users/mashael/Desktop/sei/projects/project-4/react-template/src/images/fee.svg'
+import icon1 from '../../../src/images/pin.svg'
+import icont2 from '../../../src/images/focus.svg'
+import icon3 from '../../../src/images/link.svg'
+import icon4 from '../../../src/images/fee.svg'
 
 class Work extends Component {
   
