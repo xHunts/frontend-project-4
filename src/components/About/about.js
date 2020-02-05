@@ -16,6 +16,9 @@ class about extends Component {
                             <h4>DON'T HAVE ENOUGH TIME TO PLAN YOUR VISIT?</h4>
                             <h5>WANT A UNIQUE WAY TO EXPLORE DIFFERENT LOCATIONS?</h5>
                             <p>xHunts is here to let you discover the city with entrtaitment</p>
+                            <p>xHunt is an online platform for travellers and adventure seekers looking for new experiences.
+                            It shows you the world through scavenger hunting, where every scavenger hunt we create is designed 
+                            to show people the best-known landmarks as well as the hidden gems of different locations.</p>
                             <br/>
                         </div>
 
