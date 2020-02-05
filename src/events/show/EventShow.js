@@ -32,33 +32,33 @@ destroy = (id) => {
     render() { 
         return (
             <div>
-            {this.state.event ? 
-            <div>
-                <h5>Name: {this.state.event.name}</h5> 
-                <h5>Place: {this.state.event.place}</h5>
-                <h5>Date: {this.state.event.date}</h5>
-                <br/>
-                <img src={this.state.event.img}/>
-                {this.props.user ? 
+                {this.state.event ? 
                 <div>
-                    {this.props.user.admin ? 
+                    <h5>Name: {this.state.event.name}</h5> 
+                    <h5>Place: {this.state.event.place}</h5>
+                    <h5>Date: {this.state.event.date}</h5>
+                    <br/>
+                    <img src={this.state.event.img}/>
+                    {this.props.user ? 
                     <div>
-                          <Link to={`/events/${this.state.event._id}/edit`}>Edit</Link> 
-                     <button onClick={() => this.destroy(this.state.event._id)}>Delete</button>
+                        {this.props.user.admin ? 
+                        <div>
+                            <Link to={`/events/${this.state.event._id}/edit`}>Edit</Link> 
+                        <button onClick={() => this.destroy(this.state.event._id)}>Delete</button>
+                        </div>
+                        :
+                        ""}
+                    
                     </div>
                     :
                     ""}
-                  
+                
                 </div>
                 :
                 ""}
-               
-               
-            </div>
-            :
-            ""}
-            </div>
+                </div>
           );
     }
 }
 export default withRouter(EventShow);
+

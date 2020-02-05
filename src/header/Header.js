@@ -17,6 +17,7 @@ const alwaysOptions = (
   <React.Fragment>
       <Link to ='/about'>About</Link>
       <Link to ="/works">How it works</Link>
+    <Link to="/events"> Events</Link>
       <Link to="/">Home</Link>
   
   </React.Fragment>
@@ -24,8 +25,6 @@ const alwaysOptions = (
 
 const unauthenticatedOptions = (
   <React.Fragment>
-  
-    <Link to="/events"> Events</Link>
     <Link to="/sign-in">Sign In</Link>
     <Link to="/sign-up">Sign Up</Link>
   </React.Fragment>
@@ -43,7 +42,7 @@ const Header = ({ user }) => (
     <div className="topnav">
       <nav className="nav1">
         <div> 
-        <h1 className="ln">xHunts</h1>
+        <h1 className="ln">xHunt</h1>
         </div>
        
          <div>

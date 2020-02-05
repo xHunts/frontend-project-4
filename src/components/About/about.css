@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css?family=Courgette&display=swap'); */
+ @import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
 
 .font {
     font-family: 'Courgette', cursive !important;
@@ -7,11 +7,25 @@
 }
 .pcontent {
     text-align: center;
+    width: 60%;
+    /* margin: 7% auto; */
+    margin-bottom: 5%;
+    border: rgba(222, 218, 224, 0.4) solid;
+    border-radius: 17%;
   
 }
 .about-content{
-    width: 65vh;
+    /* width: 65vh;
     height: 70vh;
     margin: 7% auto;
-    border:black solid 14px;
+    border:black solid 14px; */
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#root > main > div > h1 {
+    text-align: center !important; 
 }
