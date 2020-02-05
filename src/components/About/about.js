@@ -15,7 +15,6 @@ class about extends Component {
                             <h3>CAN'T FIND YOUR WAY AROUND THE CITY?</h3>
                             <h4>DON'T HAVE ENOUGH TIME TO PLAN YOUR VISIT?</h4>
                             <h5>WANT A UNIQUE WAY TO EXPLORE DIFFERENT LOCATIONS?</h5>
-                            <p>xHunts is here to let you discover the city with entrtaitment</p>
                             <br/>
                         </div>
 

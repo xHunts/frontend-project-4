@@ -72,3 +72,23 @@ export const destroy = (user , eventId) => {
         }
     })
 }
+
+export const registerUser = (user , eventId) => {
+    return axios({
+        method: "POST",
+        url: apiUrl + `/events/${eventId}/registers`,
+        headers:{
+            "Authorization":`Bearer ${user.token}`
+        }
+    })
+}
+
+export const destroyUserRegister = (user , eventId) => {
+    return axios({
+        method: "Delete",
+        url: apiUrl + `/events/${eventId}/registers`,
+        headers:{
+            "Authorization":`Bearer ${user.token}`
+        }
+    })
+}
