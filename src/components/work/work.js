@@ -65,7 +65,6 @@ class Work extends Component {
           </div>
         </div>
       </div>
-                    <button className="register">Register</button>
                     </div>
           
         );

@@ -5,7 +5,7 @@ class home extends Component {
         return ( 
         <div className="home">
             <div>
-                <h1 claasName="font1" style={{color:'#CC9999'}}>xHunts</h1>
+                <h1 style={{color:'#CC9999'}}>xHunt</h1>
                 <h3>A scavenger hunts platform</h3>
             </div>
         </div>

@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
 
-#root > main > div > h1{
+#root > main > div > div > h1{
     font-family: 'Courgette', cursive !important;
-    text-align: right; 
+    text-align: center ; 
 }
 
 #root > main > div > h3 {
@@ -17,17 +17,18 @@
 .home {
     background-image:url("../../images/index.png");
     max-width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    padding-right: 90px;
+
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-
-.home div{
-    text-align: center;
+.home div {
+    margin-right: 19%;
 }
+
+
