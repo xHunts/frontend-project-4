@@ -21,5 +21,5 @@ User will be able to cancel his registeration
 
 ## Data Modeling
 
-User ----< Evnet
-Event ----< Users
+User >----< Evnet
+0
